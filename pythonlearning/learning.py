@@ -138,3 +138,29 @@ for prime in list_of_primes:
 
 
 
+#--------------------------------------------------------------------------------------------------------------------
+# get the area for what shape
+'''
+def get_area(shape):
+    shape = shape.lower()
+    if shape == "rectangle":
+        rectangle_area()
+    elif shape =="circle":
+        circle_area()
+    else:
+        print("Please enter circle or rectangle")
+
+def rectangle_area():
+    length = input("please enter the length of the rectangle")
+    length= float(input)
+    width=input("please enter the width of the rectangle")
+    width=float(width)
+    area=length*width
+    print("the area of the rectangle is: ",area)
+
+
+def circle_area():
+    radius = float(input("Enter the radius : "))
+    area = math.pi * (math.pow(radius, 2))
+    print("The area of the circle is {:.2f}".format(area))
+'''
