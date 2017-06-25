@@ -59,6 +59,7 @@ print('hello' *10)
 
 # Unicode： A-Z 65-90      a-z 97-122
 #输入一串string， 转换成unicode， 然后再转换成原来的string
+'''
 newstring=input("pleas enter an string: ")
 hidestring=[]
 for i in newstring:
@@ -69,6 +70,26 @@ showingstring=''
 for n in hidestring:
     showingstring=showingstring+str(chr(int(n)))
     print(showingstring)
+'''
+
+
+
+
+#string module
+#a_list=["a","b"," abc"]
+#print("".join(a_list))
+
+
+#GET THE ABBR OF THE INPUT LIST
+'''
+newstring=input("please enter the string: ")
+newstring=newstring.upper()
+newlist=newstring.split()
+for each_word in newlist:
+    print(each_word[0],end="")
+'''
+
+
 
 
 
