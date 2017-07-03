@@ -1,5 +1,7 @@
 from decimal import Decimal
 import math
+import random
+
 '''
 
 number=input("please enter a number: ")
@@ -164,3 +166,105 @@ def circle_area():
     area = math.pi * (math.pow(radius, 2))
     print("The area of the circle is {:.2f}".format(area))
 '''
+
+'''
+list1=['string',1,222]
+onetotenlist = list(range(10))
+#print (onetotenlist)
+onetotenlist=list1+onetotenlist
+#print( onetotenlist)
+index_of_one= onetotenlist.index(222)
+#print(index_of_one)
+#print(onetotenlist.count(1))
+onetotenlist.append(1)
+#print(onetotenlist)
+
+
+# bubble sorting
+numList=[3,2,1,4,53,2,1]
+i = len(numList) - 1
+while i > 1:
+    j = 0
+    while j < i:
+        # Tracks the comparison of index values
+        print("\nIs {} > {}".format(numList[j], numList[j + 1]))
+        print()
+        # If the value on the left is bigger switch values
+        if numList[j] > numList[j + 1]:
+            print("Switch")
+            temp = numList[j]
+            numList[j] = numList[j + 1]
+            numList[j + 1] = temp
+        else:
+            print("Don't Switch")
+        j += 1
+        # Track changes to the list
+        for k in numList:
+            print(k, end=", ")
+        print()
+    print("END OF ROUND")
+    i -= 1
+for k in numList:
+    print(k, end=", ")
+print()
+
+# ---------- PROBLEM : CREATE MULTIPLICATION TABLE ----------
+# With 2 for loops fill the cells in a multidimensional
+# list with a multiplication table using values 1 - 9
+'''
+1, 2, 3, 4, 5, 6, 7, 8, 9,
+2, 4, 6, 8, 10, 12, 14, 16, 18,
+3, 6, 9, 12, 15, 18, 21, 24, 27,
+4, 8, 12, 16, 20, 24, 28, 32, 36,
+5, 10, 15, 20, 25, 30, 35, 40, 45,
+6, 12, 18, 24, 30, 36, 42, 48, 54,
+7, 14, 21, 28, 35, 42, 49, 56, 63,
+8, 16, 24, 32, 40, 48, 56, 64, 72,
+9, 18, 27, 36, 45, 54, 63, 72, 81
+'''
+# Create the multidimensional list
+multTable = [[0] * 10 for i in range(10)]
+# This will increment for each row
+for i in range(1, 10):
+    # This will increment for each item in the row
+    for j in range(1, 10):
+        # Assign the value to the cell
+        multTable[i][j] = i * j
+# Output the data in the same way you assigned it
+for i in range(1, 10):
+    for j in range(1, 10):
+        print(multTable[i][j], end=", ")
+    print()
+    
+'''
+
+#new bubble sorting    wrong sample
+'''
+listone=[2,3,4,5,1,7,8,10]
+newlist=listone
+sortedlist=[]
+length=len(newlist)
+for i in range(0,length):
+    for j in newlist:
+        if newlist[i]<=newlist[j]:
+            temp=newlist[i]
+        sortedlist.append(newlist[i])
+        newlist.remove(newlist[i])
+        length=len(newlist)
+print(sortedlist)
+'''
+
+
+# let me do the bubble sorting again  , correct version
+listone=[5,4,2,6,8,5,3,2,6,9,10,12,13,4,2,2,3]
+listlen=len(listone)
+loop=0
+while loop<listlen:
+    for i in range(0,listlen-1):
+        if listone[i]>=listone[i+1]:
+            temp1=listone[i]
+            listone[i]=listone[i+1]
+            listone[i+1]=temp1
+    print(listone,"sort time:",loop+1)
+    loop=loop+1
+# yeah! I did it!
