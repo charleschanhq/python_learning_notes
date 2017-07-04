@@ -341,3 +341,41 @@ def circle_area():
 
 
 
+
+
+
+
+
+
+
+# recursive function dict
+
+mydict={"name":"hanqing","age":"21"}
+#print(mydict)
+
+'''
+
+def factorial(num):
+    if num<=1:
+        return 1
+    else:
+        result=num*factorial(num-1)
+        return result
+#print (factorial(4))
+
+# how to print out 1 1 2 3 5 8 13 21??/
+
+def fib(n):
+    if n==0:
+        return 0
+    elif n==1:
+        return 1
+    else:
+        result=fib(n-1)+fib(n-2)
+        return result
+print(fib(7))
+'''
+
+
+
+
