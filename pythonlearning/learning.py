@@ -253,7 +253,7 @@ for i in range(0,length):
         length=len(newlist)
 print(sortedlist)
 '''
-
+'''
 
 # let me do the bubble sorting again  , correct version
 listone=[5,4,2,6,8,5,3,2,6,9,10,12,13,4,2,2,3]
@@ -268,3 +268,76 @@ while loop<listlen:
     print(listone,"sort time:",loop+1)
     loop=loop+1
 # yeah! I did it!
+
+
+'''
+
+'''
+
+#function
+# ---------- UNKNOWN NUMBER OF ARGUMENTS ----------
+# We can receive an unknown number of arguments using
+# the splat (*) operator
+
+def sumAll(*args):
+    sum = 0
+
+    for i in args:
+        sum += i
+
+    return sum
+
+
+print("Sum :", sumAll(1, 2, 3, 4))
+
+# ---------- pythontut2.py ----------
+
+# We need this module for our program
+import math
+
+
+# Functions allow us to avoid duplicate code in our programs
+
+# Aside from having to type code twice duplicate code is bad
+# because it requires us to change multiple blocks of code
+# if we need to make a change
+
+# ---------- OUR FUNCTIONS ----------
+
+# This routes to the correct area function
+# The name of the value passed doesn't have to match
+def get_area(shape):
+    # Switch to lowercase for easy comparison
+    shape = shape.lower()
+
+    if shape == "rectangle":
+        rectangle_area()
+    elif shape == "circle":
+        circle_area()
+    else:
+        print("Please enter rectangle or circle")
+
+
+# Create function that calculates the rectangle area
+def rectangle_area():
+    length = float(input("Enter the length : "))
+    width = float(input("Enter the width : "))
+
+    area = length * width
+
+    print("The area of the rectangle is", area)
+
+
+# Create function that calculates the circle area
+def circle_area():
+    radius = float(input("Enter the radius : "))
+
+    area = math.pi * (math.pow(radius, 2))
+
+    # Format the output to 2 decimal places
+    print("The area of the circle is {:.2f}".format(area))
+
+'''
+
+
+
