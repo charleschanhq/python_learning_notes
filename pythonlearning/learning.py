@@ -1,7 +1,7 @@
 from decimal import Decimal
 import math
 import random
-
+import os
 '''
 
 number=input("please enter a number: ")
@@ -379,3 +379,31 @@ print(fib(7))
 
 
 
+
+
+
+
+# reading and writing files
+
+with open("newfile.txt",mode='w',encoding='utf-8') as myfile:
+    myfile.write('some random text\n this is the second line \n this is the third line \n this is the fourth line')
+
+with open('newfile.txt',encoding='utf-8') as myfile:
+    print(myfile.read())
+
+print('file closed? :',myfile.closed)
+print('file name is :',myfile.name)
+print(myfile.mode)
+# rename the file
+os.rename('newfile.txt','newfile2.txt')
+#remove the file from the current dir
+os.remove('newfile2.txt')
+#create a new dir under current directory
+os.mkdir('mydir')
+# os.getced will show the path of current directory
+print('current Directory:', os.getcwd())
+#os.chdir will go to upper dir
+#os.chdir('..')
+print('current Directory:', os.getcwd())
+# rmdir will remove the dir
+os.rmdir('mydir')
