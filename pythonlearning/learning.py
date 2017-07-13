@@ -506,4 +506,49 @@ print(min(newtuple))
 
 # object oriented programmming
 
+class Animal:
+    def __init__(self, birthType="Unknown",
+                 appearance="Unknown",
+                 blooded="Unknown"):
+        self.__birthType = birthType
+        self.__appearance = appearance
+        self.__blooded = blooded
+
+    # The getter method
+    @property
+    def birthType(self):
+        # When using getters and setters don't forget the __
+        return self.__birthType
+
+    @birthType.setter
+    def birthType(self, birthType):
+        self.__birthType = birthType
+
+    @property
+    def appearance(self):
+        return self.__appearance
+
+    @appearance.setter
+    def appearance(self, appearance):
+        self.__appearance = appearance
+
+    @property
+    def blooded(self):
+        return self.__blooded
+
+    @blooded.setter
+    def blooded(self, blooded):
+        self.__blooded = blooded
+
+    # Can be used to cast our object as a string
+    # type(self).__name__ returns the class name
+    def __str__(self):
+        return "A {} is {} it is {} it is " \
+               "{}".format(type(self).__name__,
+                           self.birthType,
+                           self.appearance,
+                           self.blooded)
+
+
+
 
